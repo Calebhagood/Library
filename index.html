@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library App</title>
+  </head>
+  <body>
+    <div class="header">
+      <div id="hamburgerMenu">
+        <button id="hamburgerMenuButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            width="30px"
+            height="30px"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="logo">
+        <h1>Library</h1>
+        <h5>Your personal library catalog</h5>
+      </div>
+      <div id="addBookDiv">
+        <button id="showAddBookForm" class="rotateCounterClockwise normal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            width="30px"
+            height="30px"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mainHeading">
+      <h2>Your Bookshelf</h2>
+    </div>
+    <div class="main" id="library"></div>
+
+    <section class="formPopup hidden" id="bookFormSection">
+      <form id="bookForm">
+        <div class="formContainer">
+          <h1 class="formHeading">New Book</h1>
+          <div class="input-container">
+            <label for="title"></label>
+            <input type="text" name="title" id="title" required />
+            <span> Title </span>
+          </div>
+          <div class="input-container">
+            <label for="author"></label>
+            <input type="text" name="author" id="author" required />
+            <span> Author </span>
+          </div>
+          <div class="input-container">
+            <label for="pages"> </label>
+            <input type="number" name="pages" id="pages" min="1" required />
+            <span> Pages </span>
+          </div>
+          <div class="input-container">
+            <span class="checkbox"> Read </span>
+            <label class="checkbox-container">
+              <input type="checkbox" class="readStatus" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div id="btn">
+            <button type="submit" class="submitBtn" id="addBookBtn">
+              Add to Library
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <div class="empty" id="emptyMsg">
+      <p>click the "+" in the upper right to add books</p>
+    </div>
+
+    <div class="footer">
+      <a id="footerLink" href="https://github.com/Calebhagood"
+        ><img src="./images/githubLogo.svg" alt="Github Logo"
+      /></a>
+      <p>
+        <a id="footerLink" href="https://github.com/Calebhagood"
+          >Caleb Hagood</a
+        >
+      </p>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
